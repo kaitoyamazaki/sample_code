@@ -5,7 +5,7 @@ import numpy as np
 
 kernel = np.ones((10,10),np.uint8)
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(2)
 cap.set(3, 1280)
 cap.set(4, 720)
 

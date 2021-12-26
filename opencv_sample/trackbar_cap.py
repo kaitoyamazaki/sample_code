@@ -34,8 +34,8 @@ while(1):
     lower = np.array([h_l, s_l, v_l])
     upper = np.array([h_h, s_h, v_h])
     img_mask_blue = cv2.inRange(hsv, lower, upper)
-    img_color_blue = cv2.bitwise_and(img, img, mask=img_mask_blue)
-    #cv2.imshow("origin",img)
+    img_color_blue = cv2.bitwise_and(img ,img, mask=img_mask_blue)
+    cv2.imshow("origin",img)
     cv2.imshow("mask", img_color_blue)
     
     k = cv2.waitKey(1)

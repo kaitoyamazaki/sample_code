@@ -13,8 +13,8 @@ def pick_up_blue_ball():
 
         # Convert to hsv
         hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
-        lower_blue = np.array([100, 50, 50])
-        upper_blue = np.array([150, 255, 255])
+        lower_blue = np.array([160, 100, 100])
+        upper_blue = np.array([180, 255, 255])
         img_mask_blue = cv2.inRange(hsv, lower_blue, upper_blue)
         img_color_blue = cv2.bitwise_and(img, img, mask=img_mask_blue)
 
