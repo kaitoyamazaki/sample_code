@@ -26,6 +26,10 @@ def main():
     mask3 = cv2.inRange(hsv, low_red, upper_red)
     #masking = cv2.bitwise_and(img, img, mask = mask3)
     all_mask = mask1 + mask2 + mask3
+
+    kernel = np.ones((5,5),np.uint8)
+
+    all_mask = cv2.dilate(all_mask,kernel,iterations = 1)
     masking = cv2.bitwise_and(img, img, mask = all_mask)
     # Hough_tranceration
     #img = img[:,::-1]
